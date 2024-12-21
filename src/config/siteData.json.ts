@@ -16,18 +16,18 @@ export interface SiteDataProps {
 
 // Update this file with your site specific information
 const siteData: SiteDataProps = {
-  name: "Horizon Photography",
+  name: "NepalIdeas Photography/Videography",
   // Your website's title and description (meta fields)
   title:
-    "Horizon - a beautiful photography website template made with Astro and Tailwind CSS",
+    "NepalIdeas - make your moments memorable with us",
   description:
-    "Get your next website up and running quickly with our beautiful website theme designed using Astro and Tailwind CSS. Perfect for freelancers, developers, startups, and personal use.",
+    "NepalIdeas is a photography/videography services company that was born in Nepal but based in the United States. We make your moments memorable with our professional photography and videography services.",
   useViewTransitions: true,
   // Your information!
   author: {
-    name: "Cosmic Themes",
-    email: "creator@cosmicthemes.com",
-    twitter: "Cosmic_Themes",
+    name: "Sujan Thapa",
+    email: "sujan2thapa@gmail.com",
+    twitter: "",
   },
 
   // default image for meta tags if the page doesn't have an image already
