@@ -9,7 +9,7 @@ import AutoImport from "astro-auto-import";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://nepalideas.com",
+  site: "https://sujanthapa.com/nepalideas/",
   integrations: [
     // example auto import component into blog post mdx files
     AutoImport({
