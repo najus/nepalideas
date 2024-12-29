@@ -1,5 +1,6 @@
 ---
 import { type CollectionEntry } from "astro:content";
+import GoogleAnalytics from "@components/Seo/GoogleAnalytics.astro";
 
 // component imports
 import BaseHead from "@layouts/BaseHead.astro";
@@ -33,6 +34,7 @@ const {
 <!doctype html>
 <html lang="en" transition:animate="fade">
   <head>
+    <GoogleAnalytics />
     <BaseHead
       type={type}
       title={title}
