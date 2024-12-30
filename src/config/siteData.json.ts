@@ -16,12 +16,12 @@ export interface SiteDataProps {
 
 // Update this file with your site specific information
 const siteData: SiteDataProps = {
-  name: "NepalIdeas Photography/Videography",
+  name: "Nepali Ideas",
   // Your website's title and description (meta fields)
   title:
-    "NepalIdeas - make your moments memorable with us",
+    "Nepali Ideas - Capture, Create, and Connect with Professional Services",
   description:
-    "NepalIdeas is a photography/videography services company that was born in Nepal but based in the United States. We make your moments memorable with our professional photography and videography services.",
+    "Nepali Ideas offers premium photography, videography, advertising, and marketing services. Based in the United States with roots in Nepal, we help you capture your moments, grow your brand, and connect with your audience.",
   useViewTransitions: true,
   // Your information!
   author: {
@@ -32,8 +32,8 @@ const siteData: SiteDataProps = {
 
   // default image for meta tags if the page doesn't have an image already
   defaultImage: {
-    src: "/images/cosmic-themes-logo.jpg",
-    alt: "Cosmic Themes logo",
+    src: "/images/nepali-ideas-logo.jpg",
+    alt: "Nepali Ideas logo",
   },
 };
 
