@@ -23,7 +23,7 @@ const navConfig: navItem[] = [
   },
   {
     text: "Services",
-    link: "/#pricing",
+    link: "/#services",
   },
   {
     text: "Pages",
@@ -37,8 +37,8 @@ const navConfig: navItem[] = [
         link: "/privacy-policy/",
       },
       {
-        text: "Elements",
-        link: "/elements/",
+        text: "About Us",
+        link: "/#aboutus",
       },
       {
         text: "404",
