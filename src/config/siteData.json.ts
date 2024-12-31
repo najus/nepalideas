@@ -16,12 +16,12 @@ export interface SiteDataProps {
 
 // Update this file with your site specific information
 const siteData: SiteDataProps = {
-  name: "Nepali Ideas",
+  name: "Nepal Ideas",
   // Your website's title and description (meta fields)
   title:
-    "Nepali Ideas - Capture, Create, and Connect with Professional Services",
+    "Nepal Ideas - Capture, Create, and Connect with Professional Services",
   description:
-    "Nepali Ideas offers premium photography, videography, advertising, and marketing services. Based in the United States with roots in Nepal, we help you capture your moments, grow your brand, and connect with your audience.",
+    "At Nepal Ideas, we believe in breaking barriers and unlocking the potential of businesses and individuals in the US and Nepal. Whether you want to elevate your brand, promote an event, or celebrate a special occasion, our expertise in content creation, branding, marketing, and digital solutions will help you craft creative strategies and deliver impactful results",
   useViewTransitions: true,
   // Your information!
   author: {
@@ -33,7 +33,7 @@ const siteData: SiteDataProps = {
   // default image for meta tags if the page doesn't have an image already
   defaultImage: {
     src: "/images/nepali-ideas-logo.jpg",
-    alt: "Nepali Ideas logo",
+    alt: "Nepal Ideas logo",
   },
 };
 

@@ -1,69 +1,148 @@
 ---
-// components
 import Button from "@components/Button/Button.astro";
 ---
 
-<form
-  id="contact-form"
-  name="contact form"
-  class="flex h-full flex-col justify-between gap-4"
->
-  <input type="hidden" name="form-name" value="contact" />
-  <div>
-    <label for="contact-name" class="font-heading-1 text-lg uppercase"
-      >Your Name</label
-    >
-    <input
-      type="text"
-      class="form__input"
-      name="name"
-      id="contact-name"
-      placeholder=""
-      required
-    />
+<style>
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.3s;
+  }
+  .popup-overlay.visible {
+    visibility: visible;
+    opacity: 1;
+  }
+  .popup-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 400px;
+  }
+  .popup-close {
+    margin-top: 1rem;
+    background: #ff4d4d;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+</style>
+
+<section>
+  <form
+    id="contact-form"
+    class="flex h-full flex-col justify-between gap-4"
+  >
+    <input type="hidden" name="access_key" value="a59740cd-cdd6-4a2f-a342-d633b611b907" />
+    <input type="checkbox" class="hidden" style="display:none" name="botcheck" />
+    <div>
+      <label for="contact-name" class="font-heading-1 text-lg uppercase"
+        >Your Name</label
+      >
+      <input
+        type="text"
+        class="form__input"
+        name="name"
+        id="contact-name"
+        placeholder=""
+        required
+      />
+    </div>
+    <div class="flex flex-col gap-1">
+      <label for="contact-email" class="font-heading-1 text-lg uppercase"
+        >Contact E-mail
+      </label>
+      <input
+        type="email"
+        class="form__input"
+        name="email"
+        id="contact-email"
+        inputmode="email"
+        placeholder=""
+        required
+      />
+    </div>
+    <div>
+      <label for="contact-date" class="font-heading-1 text-lg uppercase"
+        >Event Date
+      </label>
+      <input
+        type="date"
+        class="form__input"
+        name="date"
+        id="contact-date"
+        placeholder=""
+        required
+      />
+    </div>
+    <div>
+      <label for="contact-message" class="font-heading-1 text-lg uppercase"
+        >Message
+      </label>
+      <textarea
+        name="message"
+        class="form__input"
+        id="contact-message"
+        rows="6"
+        placeholder=""
+        required></textarea>
+    </div>
+    <div class="flex">
+      <Button variant="primary" type="submit" class="w-full px-10 md:w-fit">Submit</Button>
+    </div>
+  </form>
+
+  <!-- Popup -->
+  <div id="popup" class="popup-overlay">
+    <div class="popup-content">
+      <p>Thank you! Your message has been successfully submitted.</p>
+      <button id="close-popup" class="popup-close">Close</button>
+    </div>
   </div>
-  <div class="flex flex-col gap-1">
-    <label for="contact-email" class="font-heading-1 text-lg uppercase"
-      >Contact E-mail
-    </label>
-    <input
-      type="email"
-      class="form__input"
-      name="email"
-      id="contact-email"
-      inputmode="email"
-      placeholder=""
-      required
-    />
-  </div>
-  <div>
-    <label for="contact-date" class="font-heading-1 text-lg uppercase"
-      >Event Date
-    </label>
-    <input
-      type="date"
-      class="form__input"
-      name="date"
-      id="contact-date"
-      placeholder=""
-      required
-    />
-  </div>
-  <div>
-    <label for="contact-message" class="font-heading-1 text-lg uppercase"
-      >Message
-    </label>
-    <textarea
-      name="message"
-      class="form__input"
-      id="contact-message"
-      rows="6"
-      placeholder=""
-      required></textarea>
-  </div>
-  <div class="flex">
-    <Button variant="primary" type="submit" class="w-full px-10 md:w-fit"
-      >Submit</Button
-    >
-  </div>
-</form>
+
+  <script>
+    const form = document.getElementById("contact-form");
+    const popup = document.getElementById("popup");
+    const closePopup = document.getElementById("close-popup");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          body: formData,
+        });
+
+        if (response.ok) {
+          popup.classList.add("visible");
+          form.reset();
+        } else {
+          alert("Something went wrong. Please try again.");
+        }
+      } catch (error) {
+        alert("An error occurred. Please check your connection and try again.");
+      }
+    });
+
+    if (closePopup && popup) {
+      closePopup.addEventListener("click", () => {
+        popup.classList.remove("visible");
+      });
+    }
+  </script>
+</section>
