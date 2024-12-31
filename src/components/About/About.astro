@@ -1,39 +1,75 @@
 ---
 /**
- * * About section
- */
+   * * About section
+   */
 
-import { Image } from "astro:assets";
+
+   import { Image } from "astro:assets";
+
 
 import profileImage from "@assets/images/photographer-min.jpg";
+import sumanImage from "@assets/images/suman-thapa.jpg"
 ---
 
+
 <section id="about" class="site-container scroll-mt-10 py-8 md:py-12">
-  <div class="flex flex-col md:flex-row">
-    <div class="md:w-2/3">
-      <h2 class="h3 text-pretty uppercase text-primary-500">
-        Meet your photographer
-      </h2>
-      <h3 class="h2 mt-4">Sujan</h3>
-      <div class="mt-8 bg-base-100 p-8 md:mb-20 lg:text-lg">
-        <p>
-          We specialize in capturing the unique beauty and joy of your special day. With a passion for storytelling and a keen eye for detail, we strive to create timeless images that reflect your love and personality. Whether it’s a beachfront ceremony, a vineyard reception, or a city hall elopement, we are dedicated to providing you with exceptional photography..
-        </p>
-        <div class="flex w-3/4 justify-end">
-          <p class="font-heading-1 text-3xl italic">- Sujan</p>
-        </div>
-      </div>
-    </div>
-    <div class="mr-auto max-w-md md:w-1/3 md:max-w-none">
-      <div class="my-auto aspect-[3/4] w-full overflow-hidden">
-        <Image
-          src={profileImage}
-          alt="Sujan"
-          width={450}
-          densities={[1.5, 2]}
-          class="h-auto min-h-full w-full min-w-full object-cover"
-        />
-      </div>
-    </div>
-  </div>
+ <h3 class="h2 mt-2">Meet your team</h3>
+ <div class="flex flex-col-reverse md:flex-row">
+   <div class="mr-auto max-w-md md:w-1/3 md:max-w-none">
+     <div class="my-auto aspect-[3/4] w-full overflow-hidden">
+       <Image
+           src={sumanImage}
+           alt="Suman"
+           width={450}
+           densities={[1.5, 2]}
+           class="h-auto min-h-full w-full min-w-full object-cover"
+       />
+     </div>
+   </div>
+   <div class="md:w-2/3 md:pl-8">
+     <h3 class="h2 mt-4 text-primary-600 normal-case">Suman - Managing Director</h3>
+     <div class="mt-8 bg-base-100 p-8 md:mb-20 lg:text-lg">
+       <p>
+         Suman brings extensive marketing experience to our team, having successfully
+         launched numerous campaigns for corporations in Nepal and the USA. As our
+         Managing Director, he drives the company's day-to-day operations with a
+         relentless focus on client success. His strategic approach, deep understanding
+         of market dynamics, and meticulous attention to cost savings make him an
+         invaluable asset. Always efficient and willing to go beyond the basics, Suman's
+         leadership ensures our continued growth and strong market presence while
+         prioritizing client satisfaction.
+       </p>
+     </div>
+   </div>
+ </div>
+
+
+ <div class="flex flex-col md:flex-row mb-12">
+   <div class="md:w-2/3">
+     <h3 class="h2 mt-4 text-primary-600 normal-case">Sujan - Founder & Chairman</h3>
+     <div class="mt-8 bg-base-100 p-8 md:mb-20 lg:text-lg">
+       <p>
+         Sujan has been working as a Software Engineer at Amazon Inc. for over 5 years,
+         bringing a wealth of experience in various web technologies. His passion for
+         customer success drives him to consistently go above and beyond. With his
+         technical expertise and leadership skills, Sujan serves as the chairman of
+         our company, guiding our vision and strategy.
+       </p>
+       <div class="flex w-3/4 justify-end">
+         <p class="font-heading-1 text-3xl italic">- Sujan</p>
+       </div>
+     </div>
+   </div>
+   <div class="mr-auto max-w-md md:w-1/3 md:max-w-none">
+     <div class="my-auto aspect-[3/4] w-full overflow-hidden">
+       <Image
+           src={profileImage}
+           alt="Sujan"
+           width={450}
+           densities={[1.5, 2]}
+           class="h-auto min-h-full w-full min-w-full object-cover"
+       />
+     </div>
+   </div>
+ </div>
 </section>
