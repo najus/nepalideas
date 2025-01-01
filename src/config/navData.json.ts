@@ -18,34 +18,34 @@ const navConfig: navItem[] = [
     link: "/",
   },
   {
-    text: "portfolios",
-    link: "/portfolio",
-  },
-  {
     text: "Services",
     link: "/#services",
   },
   {
-    text: "Pages",
-    dropdown: [
-      {
-        text: "Portfolio",
-        link: "/portfolio/couple-1",
-      },
-      {
-        text: "Legal",
-        link: "/privacy-policy/",
-      },
-      {
-        text: "About Us",
-        link: "/#aboutus",
-      },
-      {
-        text: "404",
-        link: "/not-a-link/",
-      },
-    ],
+    text: "About Us",
+    link: "/#aboutus",
   },
+  // {
+  //   text: "Pages",
+  //   dropdown: [
+  //     {
+  //       text: "Portfolio",
+  //       link: "/portfolio/couple-1",
+  //     },
+  //     {
+  //       text: "Legal",
+  //       link: "/privacy-policy/",
+  //     },
+  //     {
+  //       text: "About Us",
+  //       link: "/#aboutus",
+  //     },
+  //     {
+  //       text: "404",
+  //       link: "/not-a-link/",
+  //     },
+  //   ],
+  // },
 ];
 
 export default navConfig;
