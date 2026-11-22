@@ -1,5 +1,5 @@
 export interface SiteDataProps {
-  name: String;
+  name: string;
   title: string;
   description: string;
   useViewTransitions?: boolean; // defaults to false. Set to true to enable some Astro 3.0 view transitions
@@ -32,8 +32,8 @@ const siteData: SiteDataProps = {
 
   // default image for meta tags if the page doesn't have an image already
   defaultImage: {
-    src: "/images/nepali-ideas-logo.jpg",
-    alt: "Nepal Ideas logo",
+    src: "/images/og.webp",
+    alt: "Nepal Ideas - Capture, Create, and Connect with Professional Services",
   },
 };
 

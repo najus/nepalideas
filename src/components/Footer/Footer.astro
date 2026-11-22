@@ -1,6 +1,4 @@
 ---
-import { Icon } from "astro-icon/components";
-
 // components
 import FooterLink from "./FooterLink.astro";
 import SiteLogo from "@components/SiteLogo/SiteLogo.astro";
@@ -24,71 +22,15 @@ const today = new Date();
       </div>
       <div class="col-span-2 flex justify-end gap-4">
         <FooterLink href="/">Home</FooterLink>
-        <FooterLink href="/#portfolio">Portfolio</FooterLink>
+        <FooterLink href="/#services">Services</FooterLink>
       </div>
       <div class="hidden justify-center text-center md:flex">
         <SiteLogo />
       </div>
       <div class="flex gap-4 md:col-span-2">
-        <FooterLink href="/#pricing">Pricing</FooterLink>
+        <FooterLink href="/#aboutus">About Us</FooterLink>
         <FooterLink href="/#contact">Contact</FooterLink>
       </div>
-    </div>
-
-    <!-- lets connect -->
-    <div class="description mx-auto mt-6 max-w-[21rem] px-4 text-center">
-      <p>
-        <span class="italic">Lets connect!</span> Follow our social media accounts to
-        know more about us
-      </p>
-    </div>
-
-    <!-- socials -->
-    <div class="mt-8 flex justify-center gap-4 text-primary-500">
-      <a
-        href="https://x.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Icon
-          name="socials/mdi-facebook"
-          class="size-6 transition hover:opacity-80"
-        />
-        <span class="sr-only">Facebook</span>
-      </a>
-      <a
-        href="https://x.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Icon
-          name="socials/mdi-twitter"
-          class="size-6 transition hover:opacity-80"
-        />
-        <span class="sr-only">Twitter</span>
-      </a>
-      <a
-        href="https://x.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Icon
-          name="socials/mdi-youtube"
-          class="size-6 transition hover:opacity-80"
-        />
-        <span class="sr-only">Youtube</span>
-      </a>
-      <a
-        href="https://x.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Icon
-          name="socials/basil-instagram-solid"
-          class="size-6 transition hover:opacity-80"
-        />
-        <span class="sr-only">Instagram</span>
-      </a>
     </div>
 
     <!-- copyright -->

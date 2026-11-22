@@ -12,6 +12,7 @@ images:
     [./couple-9-1.jpg],
     [./cake-min-1.jpg, ./dress-min-1.jpg],
   ]
+draft: true
 order: 1
 ---
 
