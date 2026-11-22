@@ -74,8 +74,8 @@ const imageUrl =
     },
   }}
   twitter={{
-    site: "@" + siteData.author.twitter,
-    creator: "@" + siteData.author.twitter,
+    site: siteData.author.twitter ? "@" + siteData.author.twitter : undefined,
+    creator: siteData.author.twitter ? "@" + siteData.author.twitter : undefined,
     card: "summary_large_image",
     title: title,
     description: description,
